@@ -17,4 +17,10 @@ public class OperationTest extends TestCase {
         double result = op.apply(a, b);
         assertEquals(5.0, result);
     }
+
+    public void testMul() {
+        Operation op = new MulOperation();
+        double result = op.apply(a, b);
+        assertEquals(50.0, result);
+    }
 }
