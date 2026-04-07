@@ -23,4 +23,20 @@ public class OperationTest extends TestCase {
         double result = op.apply(a, b);
         assertEquals(50.0, result);
     }
+
+    public void testDiv() {
+        Operation op = new DivOperation();
+        double result = op.apply(a, b);
+        assertEquals(2.0, result);
+    }
+
+    public void testDivByZero() {
+        Operation op = new DivOperation();
+        try {
+            op.apply(a, 0);
+            fail("应该抛出 ArithmeticException");
+        } catch (ArithmeticException e) {
+            assertEquals("除数不能为0", e.getMessage());
+        }
+    }
 }
