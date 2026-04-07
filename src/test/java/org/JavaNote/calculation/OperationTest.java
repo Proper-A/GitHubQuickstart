@@ -11,4 +11,10 @@ public class OperationTest extends TestCase {
         double result = op.apply(a, b);
         assertEquals(15.0, result);
     }
+
+    public void testSub() {
+        Operation op = new SubOperation();
+        double result = op.apply(a, b);
+        assertEquals(5.0, result);
+    }
 }
