@@ -39,4 +39,10 @@ public class OperationTest extends TestCase {
             assertEquals("除数不能为0", e.getMessage());
         }
     }
+
+    public void testPow() {
+        Operation op = new PowOperation();
+        double result = op.apply(a, b); // 10^5
+        assertEquals(100000.0, result);
+    }
 }
